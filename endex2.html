@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>صفحة إبداعية</title>
+    <style>.button {
+
+  font-family: 'cursive';
+  text-transform: uppercase;
+  animation: pulse 1s alternate-reverse infinite;
+  transform: perspective(1000px) rotateX(20deg);
+  padding: 0.5s ease, background-color 0.5s ease;
+  border: 25px solid #000000;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.3);
+  padding: 7px 20px;
+  background-color: #00458f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s, border-radius 0.3s;
+}
+@keyframes rotateImage {                     /*smi hd 3mliya ay ism */
+  0% {                                        /* bdaya thwl*/
+    transform:  translateX(0);                     /* */
+  }
+  100% {                                         /* nihaya thwl*/
+    transform: translate(300px,300px) ;                    /* hawl : ila hada lmw93 300X 300Y*/
+  }
+}
+.button:hover { transform: translate(5px, -5px);
+  animation: rotateImage 1s linear infinite;
+ 
+  animation-direction: alternate-reverse;
+  background-color: #b30000;
+  padding: 10px 20px;
+}
+
+.button:active {
+  transform: scale(1.1);
+  background-color: #ff5722;
+  border-radius: 30%;
+  padding: 7px 18px;
+}
+h1{ font-size: 15vw; background-image: url(soli.jpg); background-size: cover; background-clip: text; -webkit-background-clip: text; color:transparent;}
+    </style>
+</head>
+
+<body>
+
+    <button class="button">
+        <h1>Click Me</h1>
+    </button>
+    <script>const button = document.querySelector('.button');
+        const clickSound = new Audio('aaa.mp3');
+
+        button.addEventListener('click', () => {
+            clickSound.play();
+        });
+</script>
+    
+</body>
+
+</html>
